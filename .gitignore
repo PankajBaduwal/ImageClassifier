@@ -4,7 +4,7 @@ venv/
 env/
 ENV/
 
-# Python cache
+# Python cache and build files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -28,12 +28,14 @@ wheels/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+*.ipynb
 
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS generated files
 .DS_Store
@@ -44,12 +46,47 @@ wheels/
 ehthumbs.db
 Thumbs.db
 
-# Large files (your model is already included, but this is for future)
-*.large
-*.tmp
+# Environment variables
+.env
+.env.local
+.env.*.local
 
-# Sample images (optional - remove if you want to include them)
+# Training data (not needed for deployment)
+Fruits_Vegetables/
+train/
+test/
+validation/
+dataset/
+data/
+
+# Sample images (not needed for deployment)
 *.jpg
 *.jpeg
 *.png
 *.webp
+*.gif
+*.bmp
+
+# Large files and temporary files
+*.large
+*.tmp
+*.temp
+*.log
+
+# Git history (if any)
+.git/
+.gitattributes
+
+# Documentation files (optional - remove if you want to keep them)
+README.md
+CHANGELOG.md
+LICENSE
+*.md
+*.txt
+
+# Model training files (not needed for deployment)
+*.h5
+*.hdf5
+model_checkpoints/
+logs/
+*.csv (unless needed for app)
